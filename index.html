@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Adivinar el Número</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Juego de Adivinar el Número</h1>
+        <p>Estoy pensando en un número entre 1 y 100. ¡Adivina cuál es!</p>
+
+        <div class="form-group">
+            <input type="number" id="guessInput" min="1" max="100" placeholder="Ingrese un número entre el 1 y el 100">
+            <label for="guessInput">Tu número:</label>
+        </div>
+        <button id="submitGuessBtn">Adivinar</button>
+        <button id="resetBtn">Reiniciar Juego</button>
+
+        <p id="message"></p>
+        <p>Intentos: <b id="attempts">0</b></p>
+        <p>Intentos restantes: <b id="remainingAttempts">0</b></p>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
