@@ -18,18 +18,18 @@ const handleGuess = () => {
     attemptsElement.textContent = attempts;
     
     remainingAttempts.textContent = maxAttempts - attempts;
-    
-    if (attempts >= maxAttempts) {
-        displayMessage(`¡Se acabó el juego! El número correcto era ${secretNumber}.`, 'red');
-        showResetButton();
-        return;
-    }
 
     // Check if the user's guess is correct
     const message = userGuess === secretNumber ? `Felicitaciones. Has adivinado el número en ${attempts} intentos.` 
     : `El número es ${userGuess < secretNumber ? 'más alto' : 'inferior'}. ¡Inténtalo de nuevo!`;
 
     const color = userGuess === secretNumber ? 'green' : 'red';
+
+    if (attempts >= maxAttempts) {
+        displayMessage(`¡Se acabó el juego! El número correcto era ${secretNumber}.`, 'red');
+        showResetButton();
+        return;
+    }
 
     displayMessage(message, color);
 
